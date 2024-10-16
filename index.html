@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Game - Collecteur de Pièces</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #coins {
+            font-size: 2em;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        #time {
+            font-size: 1.5em;
+            color: #ff4500;
+            font-weight: bold;
+        }
+        #current-level {
+            font-size: 1.8em;
+            color: #32cd32;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="character-selection">
+        <h2>Choisissez votre Personnage :</h2>
+        <button id="character1">Gourmand (Ajoute +2 pièces par clic)</button>
+        <button id="character2">Fourmi (Commence avec 100 pièces)</button>
+    </div>
+    <div id="game-container" style="display:none;">
+        <h1>Collecteur de Pièces</h1>
+        <div id="stats">
+            <p>Pièces : <span id="coins">0</span></p>
+            <p>Niveau actuel : <span id="current-level">1</span></p>
+            <p>Temps restant : <span id="time">5:00</span></p>
+        </div>
+        <button id="click-button">Cliquer pour des Pièces</button>
+        <div id="generators">
+            <button id="upgrade-click-level" disabled>Améliorer Clic (50 pièces)</button>
+            <button id="buy-generator" disabled>Créer un Générateur (50 pièces)</button>
+            <button id="super-generator" style="display:none;" disabled>Créer un Super Générateur (500 pièces)</button>
+            <button id="upgrade-clicks" disabled>Automatiser le Clic (100 pièces)</button>
+        </div>
+        <div id="yield-info">
+            <h3>Rendement Actuel</h3>
+            <p>Pièces par clic : <span id="coins-per-click">1</span></p>
+            <p>Niveau Générateur : <span id="generator-level">0</span> - Pièces par seconde : <span id="generator-rate">0</span></p>
+            <p>Autoclics par seconde : <span id="auto-click-rate">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
